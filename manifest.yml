@@ -1,0 +1,5 @@
+---
+applications:
+- name: package-structure-RI
+  path: target\package-structure-RI-1.0.jar
+  routes:  - route: framework-referenceimplementation-pkg-structure-dev6.cfaa.hcsctest.net

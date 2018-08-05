@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include
+		resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+	<springProperty scope="context" name="APP_VERSION"
+		source="APP_VERSION" defaultValue="1.0" />
+
+	<appender name="console"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter"> <!-- filter the log levels -->
+			<level>INFO</level>
+		</filter>
+		<encoder
+			class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+			<providers>
+				<timestamp>
+					<timeZone>US/Central</timeZone>
+				</timestamp>
+				<pattern>
+					<pattern>
+						{
+						"severity": "%level",
+						"pid": "${PID:-}",
+						"thread": "%thread",
+						"class": "%logger{40}",<!-- Class with package name -->
+						"message":"%message",
+						"StackTrace":
+						"%replace(%xException){'\n','\u2028'}%nopex",
+						"trace":
+						"%X{X-B3-TraceId:-}",
+						"span": "%X{X-B3-SpanId:-}",
+						"parent":
+						"%X{X-B3-ParentSpanId:-}",<!-- when a parent span id is not propagated, 
+							we indicate this is the root span with an externally -->
+						"exportable":"%X{X-Span-Export:-}", <!-- Export-able:- Whether to export 
+							the files or not to zipkin -->
+						"app_version": "${APP_VERSION:-}"
+						}
+					</pattern>
+				</pattern>
+			</providers>
+		</encoder>
+	</appender>
+
+
+	<root level="INFO">
+		<appender-ref ref="console" />
+	</root>
+
+
+</configuration>
