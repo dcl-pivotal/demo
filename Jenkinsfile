@@ -18,7 +18,7 @@ pipeline {
                 stage('L&P Test') {
     
                     steps {
-                        echo 'the application is validated now'
+                        echo 'the application is L&P tested now'
                     }
 
                 }
