@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps { 
-            	pushToCloudFoundry cloudSpace: 'HCSC-dev', credentialsId: 'PCF-Credentials', organization: 'deloitte-poc', target: 'api.run.pivotal.io'
+            	pushToCloudFoundry cloudSpace: 'development', credentialsId: 'PCF-Credentials', organization: 'balu-org', target: 'api.run.pivotal.io'
             }
         }
     }

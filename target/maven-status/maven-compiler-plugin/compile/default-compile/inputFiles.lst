@@ -1,0 +1,11 @@
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/api/SimpleResourceV2.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/model/entity/Resource.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/exception/CustomError.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/config/SwaggerConfig.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/model/entity/Claim.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/Application.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/config/SecurityConfig.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/exception/ResourceValidator.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/utils/LogUtility.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/api/SimpleResource.java
+/Users/bsakariboina/git/demo/src/main/java/com/dcl/starter/simple/model/repository/ClaimRepository.java
