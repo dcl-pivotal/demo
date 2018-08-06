@@ -109,7 +109,7 @@ public class Resource implements Serializable {
 	 * @return
 	 */
 	public String getSubName() {
-		return "Deloitte-Pivotal-Test";
+		return "Deloitte-Pivotal-Test-Two";
 	}
 
 	/**
