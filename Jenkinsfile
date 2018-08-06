@@ -11,14 +11,14 @@ pipeline {
                 stage('Smoke Test') {
 
                     steps {
-                        echo 'this build  is validated now'
+                        echo 'This build  is validated now'
                     }
 
                 }
                 stage('L&P Test') {
     
                     steps {
-                        echo 'this build  is L&P tested now'
+                        echo 'This build  is L&P tested now'
                     }
 
                 }
@@ -26,7 +26,7 @@ pipeline {
         }     
         stage('NexusPush') { 
             steps { 
-               echo 'the application is pushed to nexus!'
+               echo 'This artifact is pushed to nexus!'
             }
         } 
         stage('PCF-Deploy') { 
