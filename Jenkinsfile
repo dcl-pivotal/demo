@@ -6,11 +6,24 @@ pipeline {
             	sh 'mvn clean install'
             }
         }
-        stage('Test') { 
-            steps { 
-               echo 'the application is validated now'
+        stage('Run Tests') {
+            parallel {
+                stage('Smoke Test') {
+
+                    steps {
+                        echo 'the application is validated now'
+                    }
+
+                }
+                stage('L&P Test') {
+    
+                    steps {
+                        echo 'the application is validated now'
+                    }
+
+                }
             }
-        }           
+        }     
         stage('NexusPush') { 
             steps { 
                echo 'the application is pushed to nexus!'
