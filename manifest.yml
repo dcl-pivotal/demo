@@ -2,3 +2,4 @@
 applications:
 - name: simple-starter-RI
   path: target/simple-starter-1.0.jar
+  memory: 1G
