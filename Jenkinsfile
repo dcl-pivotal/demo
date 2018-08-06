@@ -11,14 +11,14 @@ pipeline {
                 stage('Smoke Test') {
 
                     steps {
-                        echo 'the application is validated now'
+                        echo 'this build  is validated now'
                     }
 
                 }
                 stage('L&P Test') {
     
                     steps {
-                        echo 'the application is L&P tested now'
+                        echo 'this build  is L&P tested now'
                     }
 
                 }
